@@ -1,0 +1,116 @@
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+$red: #ff8b8b;
+
+input {
+    // So that the input appears below the label
+    position: relative;
+    z-index: 1;
+
+    background: #FFFFFF;
+    border-radius: 2vh;
+    padding: 2vh;
+    // Add a bit more on top for the label
+    padding-top: 2vh;
+    margin-bottom: 2vh;
+    width: 100%;
+    margin-top: -3vh;
+    border: none;
+    outline: none;
+    font-family: "Karla";
+    line-height: 2.2vh;
+    font-size: 2.5vh;
+}
+
+label {
+    // And so the label appears above the input
+    position: relative;
+    z-index: 2;
+
+    background: $brown3;
+    border-radius: 26px;
+    padding: 1.2vh;
+    padding-left: 13px;
+    padding-right: 13px;
+
+    width: fit-content;
+    font-family: "Karla";
+    font-weight: bold;
+    color: $brown1;
+    line-height: 2.2vh;
+    font-size: 2.5vh;
+}
+
+button.submitButton {
+    // So it's set in the bottom right corner
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+
+    border-radius: 15px;
+    padding: 2vh;
+    border: none;
+    outline: none;
+    min-width: fit-content;
+    
+    background-color: $brown1;
+    color: $yellow;
+    font-family: "Karla", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    line-height: 2.2vh;
+    font-size: 2.5vh;
+    &:hover{
+        background-color:$brown2;
+        margin: -2px;
+    }
+    transition: 0.1s ease;
+}
+
+p.footnote {
+    font-family: "Karla", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: $brown1;
+    font-size: 1.5vh;
+    padding-right: 10%;
+}
+
+p.footnote.warning {
+    color: $red;
+    font-weight: bold;
+    font-size: 1.5vh;
+}
+
+a {
+    color: inherit;
+    font-weight: bolder;
+}
+
+#error p {
+    color: $red;
+    padding-bottom: 2vh;
+    font-family: "Karla", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5vh;
+    font-weight: 700;
+}
+
+#error #visible {
+    /* unshrink, then fade in */
+    transition: font-size .25s,
+                margin .25s,
+                padding .25s,
+                opacity .5s .25s;
+}
+
+// hidden
+#error #hidden {
+    transition: opacity .25s,
+                font-size .5s .25s,
+                margin .5s .25s,
+                padding .5s .25s;
+    font-size: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    
+}

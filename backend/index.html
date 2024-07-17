@@ -1,0 +1,34 @@
+<h1> Mongoose demo </h1>
+
+<p>Example actions using Menu collection</p>
+
+<ul>
+    <li> <a href="/api/menu">view all the menu items</a> </li>
+    <li> <a href="/api/menu/Cappuccino">get details of one food (cappuccino used as an example)</a> </li>
+
+</ul>
+
+<p>Example actions using Vans collection</p>
+
+<ul>
+    <li> <a href="/api/van">get all vans</a> </li>
+    <li> <a href="/api/van/6076361a4fe826668955d47e/open-orders">get all outstandiung van orders from "Caffeine Carriage"</a> </li>
+    <li> <a href="/api/van/all-open">get all open vans</a> </li>
+    <li> <a href="/api/van/6076361a4fe826668955d47e/open-van/2342023/2304242"> Open "Caffeine Carriage" van at these coordinates</a> </li>
+    <li> <a href="/api/van/6076361a4fe826668955d47e/close-van"> Close up "Caffeine Carriage" van</a> </li>
+    <li> <a href="/api/van/6076361a4fe826668955d47e/outstanding-orders"> Get outstanding orders from "Caffeine Carriage"</a> </li>
+
+</ul>
+
+<p>Example actions using Order collection</p>
+
+<ul>
+    <li> <a href="/api/order"> Get all orders</a> </li>
+    <li> <a href="/api/order/new"> Add a new order (need to use a POST request)</a></li>
+    <li> <a href="/api/order/get/60823a438df8cf00156ff66b"> Get a particular order </a></li>
+    <li> <a href="/api/order/add/60823a438df8cf00156ff66b/6076333a32841a9959f91d83/1"> Add Latte to this order </a></li>
+    <li> <a href="/api/order/change-status/60823a438df8cf00156ff66b/PENDING"> Set status of this order to "PENDING" </a></li>
+    <li> <a href="/api/order/change-status/60823a438df8cf00156ff66b/OUTSTANDING"> Set status of this order to "OUTSTANDING" </a></li>
+    <li> <a href="/api/order/change-status/60823a438df8cf00156ff66b/READY"> Set status of this order to "READY" </a></li>
+
+</ul>

@@ -1,0 +1,67 @@
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+
+$shade6: #977171;
+$shade5: #C08C85;
+$shade4: #EEC3B0;
+$shade3: #FAD6BC;
+$shade2: #F9DDC3;
+$shade1: #FFF5EB;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+.vanMenuButtonBox {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    width: 40vw;
+    @media (max-width: 700px) {
+        width: 90vw;
+    }
+
+    padding:2vh;
+    background: $brown1;
+    border-radius: 2vh;
+
+    font-size: 2.5vh;
+    color: $yellow;
+    padding-left: 2vh;
+    font-family: Karla;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover{
+        filter: brightness(110%) saturate(80%);
+    }
+}
+.vanMenuButtonBox.one { 
+    background: $shade1;
+    color: $shade6;
+}
+.vanMenuButtonBox.two { 
+    background: $shade2;
+    color: $shade6;
+}
+.vanMenuButtonBox.three { 
+    background: $shade3;
+    color: $shade6;
+}
+.vanMenuButtonBox.four { 
+    background: $shade4;
+    color: $shade6;
+}
+.vanMenuButtonBox.five { 
+    background: $shade5;
+}
+.vanMenuButtonBox.six { 
+    background: $shade6;
+}
+
+.vanMenuButtonIcon {
+    padding-right: 2vh;
+    max-width: 5.5vh;
+    max-height: 5.5vh;
+}

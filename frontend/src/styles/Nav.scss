@@ -1,0 +1,67 @@
+$brown0: #805858; // <- slightly darker brown not used in original design
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+@import url("https://use.typekit.net/ntn5tjm.css");
+.Nav{
+    background-image: url('../storage/Vector3.png');
+    background-size: 500px;
+    background-position-x: right;
+    border-radius:0px 0px 50px 50px;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    height:10vh;
+    padding:5px 15%;
+    @media (max-width: 750px) {
+      padding:5px 2%;
+    }
+    img{
+      width:4vh;
+      @media (min-width:750px) {
+        width:6vh;
+
+      }
+    }
+    .profileimg{
+      @media (min-width:750px) {
+        width: 5vh;        
+      }
+    }
+}
+
+.brownFilter{
+  filter: invert(46%) sepia(4%) saturate(2257%) hue-rotate(314deg) brightness(102%) contrast(83%);
+}
+
+.interactive {
+  &:hover{
+    filter: brightness(80%) contrast(150%)
+  }
+  transition: 0.3s ease;
+}
+
+.navTitle{
+  font-size: 40px;
+  color: $brown1;
+  padding-top: 7px;
+  font-family: coquette, sans-serif;
+
+  font-weight: 600;
+  // text-decoration: 
+  font-style: normal;
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
+}
+
+.navOptions{
+  font-size:15px;
+  color:$brown1;
+  padding-top: 15px;
+  &:hover{
+    color: $brown3;
+    text-decoration: underline;
+  }
+}

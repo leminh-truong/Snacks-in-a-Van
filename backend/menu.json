@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Cappuccino",
+        "description": "Robbins",
+        "image": "insert link",
+        "price":  4.30
+    },
+    {
+        "name": "Latte",
+        "description": "Robbins",
+        "image": "insert link",
+        "price":  5
+    },
+    {
+        "name": "Flat white",
+        "description": "Robbins",
+        "image": "insert link",
+        "price":  5
+    },
+    {
+        "name": "Long black",
+        "description": "Robbins",
+        "image": "insert link",
+        "price":  5
+    },
+    {
+        "name": "Plain biscuit",
+        "description": "Robbins",
+        "image": "insert link",
+        "price":  5
+    },
+    {
+        "name": "Small cake",
+        "description": "Robbins",
+        "image": "insert link",
+        "price":  5
+    },
+    {
+        "name": "Fancy biscuit",
+        "description": "Robbins",
+        "image": "insert link",
+        "price":  5
+    },
+    {
+        "name": "Big cake",
+        "description": "Robbins",
+        "image": "insert link",
+        "price":  5
+    }
+]

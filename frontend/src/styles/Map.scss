@@ -1,0 +1,126 @@
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+
+#centeredWaypoint {
+    z-index: 2;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+
+    height: 15%;
+
+    // to account for the width and height
+    top: 42.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// and change the placeholder to a lighter grey so it is clearer
+// that it is not already filled
+::placeholder {
+    color: lightgrey;
+    opacity: 1; /* for Firefox */
+  }
+
+  #map {
+      margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    }
+    .marker {
+    background-image: url('../pages/van.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    @media (max-width:700px) {
+        width: 40px;
+        height: 40px;
+    }
+
+    }
+    .mapboxgl-popup {
+    max-width: 250px;
+    }
+    .mapboxgl-popup-content {
+    width: 270px;
+    border-radius: 2vh;
+
+    text-align: center;
+    background-color: $brown2;
+    color: $yellow;
+    font-family: Karla;
+    letter-spacing: 0.7px;
+    img{
+        @media (max-width:700px) {
+            width: 40px;
+            margin-top: -10px;
+        }
+    }
+    @media (max-width:700px) {
+        width: 170px;
+    }
+        h4{
+            font-size: 19px;
+            @media (max-width:700px) {
+                font-size: 13px;
+            }
+        }
+        h3{
+            font-size: 20px;
+            font-weight: 800;
+            @media (max-width:700px) {
+                font-size: 14px;
+            }
+        }
+        .orderButton{
+            background-color: $brown1;
+            border-radius: 4vw;
+            border-width: 0px;
+            color: $yellow;
+            font-size: 17px;
+            height: 45px;
+            width: 130px;
+            @media (max-width:700px) {
+                font-size: 13px;
+                height: 30px;
+            }
+        }
+    }
+
+.map-customer{
+    height: 60vh;
+    border-radius: 20px;
+    // and to fix a weird Safari thing
+    z-index: 1;
+    position: relative;
+    padding:0;
+    //margin-bottom: 20px !important;
+    //@media (min-width:700px) {
+    //    height: 800px;
+    //    margin-bottom: 50px;
+    //}
+}
+
+.map-container{
+    height: 500px !important;
+    border-radius: 35px;
+    // and to fix a weird Safari thing
+    z-index: 1;
+    position: relative;
+    margin-bottom: 20px !important;
+    @media (min-height:700px) {
+        height: 800px;
+        margin-bottom: 50px;
+    }
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+    border-bottom-color: $brown2;
+}

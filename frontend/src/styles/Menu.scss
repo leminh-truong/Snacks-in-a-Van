@@ -1,0 +1,132 @@
+$brown0: #805858; // <- not used in original design
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Rubik:wght@400;700&display=swap');
+
+.menuTitle{
+  font-size: 3vh;
+  padding-top: 10px;
+  color: $brown2;
+  text-align: center;
+  font-family: Rubik;
+}
+
+.menuItem{
+  font-size: 2.2vh;
+  color: $brown2;
+  padding-top: 1vh;
+  font-family: Karla;
+}
+
+.menuPrice{
+  font-size: 2.2vh;
+  color:$brown2;
+  padding-top: 1vh;
+  font-family: Karla;
+}
+.menuTotal{
+  font-size: 2.7vh;
+  color:$brown2;
+  padding-top: 2vh;
+  font-family: Rubik;
+  text-align: left;
+  padding-left: 15px;
+}
+.menuStats{
+  font-size: 2.2vh;
+  padding-left: 15px;
+  color:$brown2;
+  font-family: Karla;
+  text-align: left;
+  line-height: 10px;
+}
+
+.menuLink{
+  font-size:11px;
+  color:$brown2;
+  padding-top: 7px;
+  &:hover{
+    color: $brown3;
+    text-decoration: underline;
+  }
+  font-family: Karla;
+  text-align: center;
+}
+
+.menuRound{
+  float:left;
+  width: 4vh;
+  height: 4vh;
+  overflow:hidden;
+  position:relative;
+  border-radius:50%;
+}
+
+.menuImage{
+  position:absolute;
+  top:50%;
+  left:50%;
+  min-width:101%;
+  height:101%;
+  transform:translate(-50%,-50%);
+}
+
+.menuGridContainer {
+  display: grid;
+  grid-template-columns: 15% 50% 23% 7% 5%;
+  row-gap: 3vh;
+  padding: 1vh;
+}
+
+.plusButtonText {
+  &:hover{
+    color:$yellow;
+    font-size:3vh;
+  }
+  transition: 0.1s ease;
+  color: $brown3;
+  font-size:2.5vh;
+  font-weight: 600;
+  line-height: 2.5vh;
+  font-family: Rubik;
+  
+}
+.qtyButtonText {
+  &:hover{
+    color:$yellow;
+  }
+  transition: 0.1s ease;
+  color: $brown3;
+  font-size:2.5vh;
+  font-weight: 600;
+  line-height: 10px;
+  font-family: Rubik;
+  
+}
+.menuBackground {
+  padding: 2vh;
+  background-color: $yellow;
+  border-radius: 2vh;
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+  max-width: 50vw;
+  @media (max-width: 1000px) {
+    max-width: 100vw;
+  }
+}
+
+a.centeredButton.hover{
+  &:hover{
+    background-color:$brown3;
+    text-decoration: none;
+  }
+  transition: 0.2s ease;
+}
+a.centeredButton{
+  width:50%;
+  text-decoration: none;
+}

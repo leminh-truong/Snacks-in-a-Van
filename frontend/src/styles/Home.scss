@@ -1,0 +1,49 @@
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Rubik:wght@400;700&display=swap');
+
+.homeTitle{
+  font-size:2.5vh;
+  font-weight: 500;
+  text-align: center;
+  font-family: Rubik;
+  padding-top: 7vh;
+}
+.homeLink{
+  font-size:12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Karla;
+}
+
+.homeBackground{
+  background-color: $yellow;
+  border-radius: 2vh;
+  min-height: 20vh;
+  color:$brown3;
+  &:hover{
+    background-color:$brown3;
+    color: $yellow;
+    margin: -10px;
+  }
+  transition: 0.5s ease;
+  padding: 10px;
+}
+.homeGrid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width:99%;
+  max-width: 600px;
+  @media (max-width: 650px) {
+    grid-template-columns: 100%;
+    max-width: 320px;
+  }
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  margin-left:auto;
+  margin-right:auto;
+}

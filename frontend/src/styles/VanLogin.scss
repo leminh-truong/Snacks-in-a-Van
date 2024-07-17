@@ -1,0 +1,23 @@
+$brown0: #805858; // <- not used in original design
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+
+#tabletLogin {
+    padding: 25px;
+    background-color: $yellow;
+    border-radius: 35px;
+    max-width: 600px;
+    margin-left:auto;
+    margin-right:auto;
+    width:99%;
+    position: relative;
+
+    // and centre the items within it
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}

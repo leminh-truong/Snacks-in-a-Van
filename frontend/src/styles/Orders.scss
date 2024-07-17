@@ -1,0 +1,82 @@
+$brown0: #805858; // <- not used in original design
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+
+.orderText{
+  color: $brown2;
+  font-family: Karla;
+  text-align: left;
+  line-height: 2vh;
+  font-size: 2.5vh;
+  @media (max-width: 460px) {
+    font-size: 2vh;
+  }
+}
+
+.orderStatus{
+  color:$brown2;
+  font-family: Karla;
+}
+
+.ordersGrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 100%;
+  @media (max-width: 1500px) {
+    grid-template-columns: 100%;
+  }
+  @media (min-width: 700px), (max-width:1500px) {
+    max-width: 60%;
+  }
+  column-gap: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.orderLink{
+  font-size:2vh;
+  color:$brown2;
+  padding-top: 7px;
+  &:hover{
+    color: $brown3;
+    text-decoration: underline;
+  }
+  font-family: Karla;
+  text-align: center;
+}
+
+.orderRound{
+  float:left;
+  width: 30px;
+  height: 30px;
+  overflow:hidden;
+  position:relative;
+  border-radius:50%;
+}
+
+.orderGridContainer {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  display: grid;
+  background-color: $yellow;
+  border-radius: 2vh;
+  grid-template-columns: 30% 30% 35% 5%;
+}
+
+.orderGridContainer.orange {
+  background-color: #ffd2a8;
+}
+
+.orderGridContainer.grey  {
+  background-color: #E1E1E1;
+}
+.orderGridContainer.green {
+  background-color: #CEE59D;
+}

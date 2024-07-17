@@ -1,0 +1,142 @@
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+$brown0: #906B6B;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Rubik:wght@400;700&display=swap');
+
+.searchBar {
+    font-family: Karla;
+    border-width: 100;
+    border-color:#FF7C7C;
+    height: 1.5px;
+    width: 50%;
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
+    display:block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.vanOrdersGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30vh, 1fr));
+    row-gap: 1.5vh;
+    column-gap: 1.5vh;
+}
+
+.vanOrderItemGrid{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.vanOrderItemGrid.brown {
+    overflow: auto;
+    //background-color: $brown3;
+    padding-top: 1vh;
+    padding-left: 2vh;
+    //border-color: $brown0;
+}
+
+.vanOrderContainer {
+    border-radius: 2vh;
+    background-color: $brown2;
+    padding: 15px;
+    max-width: 50vh;
+    position: relative;
+}
+.vanOrderItemsContainer{
+    background-color: #F9F4F0;
+    border-radius: 1.8vh;
+    margin: -10px;
+    padding: 13px;
+}
+.vanOrderID {
+    font-size:1.7vh;
+    font-weight: 600;
+    color: $brown0;
+    text-align: left;
+    font-family: Karla;
+    padding-bottom: 1.3vh;
+}
+.vanOrderTimeRemaining {
+    font-size:3.5vh;
+    font-weight: 550;
+    color: $brown0;
+    text-align: left;
+    font-family: Rubik;
+    padding-left: 1vh;
+    line-height: 3.2vh;
+}
+.vanOrderTimeRemaining.red {
+    color: #ff8c8c;
+}
+.vanOrderName {
+    font-weight:600;
+    font-size:2.5vh;
+    color: $brown2;
+    text-align: left;
+    font-family: Karla;
+}
+
+.viewOrderDetails{
+    color: $brown1;
+    text-align: left;
+    font-family: Karla;
+    font-size: 2.25vh;
+    align-items: center;
+    &:hover{
+        color: $brown3;
+    }
+}
+
+.timerIcon{
+    //padding-left: 1vh;
+    //padding-top: 1vh;
+    height:4vh;
+}
+
+.orderHeaderGrid{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.noOrderIcon {
+    padding-top: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.noOrderText{
+    font-weight:600;
+    font-size:2.5vh;
+    padding:2vh;
+    color:$brown3;
+    text-align: center;
+}
+.modifiedText{
+    font-weight:600;
+    font-size:1.5vh;
+    color: white;
+    text-align: center;
+}
+.modifiedBackground{
+    background-color: #FF7C7C;
+    border-radius: 5px;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orderBack{
+    font-size:13px;
+    color:$brown2;
+    padding-top: 20px;
+    text-align: center;
+    &:hover{
+      color: $brown3;
+      text-decoration: underline;
+    }
+  }

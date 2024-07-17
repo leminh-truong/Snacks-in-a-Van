@@ -1,0 +1,82 @@
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+@import url("https://use.typekit.net/ntn5tjm.css");
+
+.selectVanButton {
+    background-color: $yellow;
+    border-radius: 1.5vh;
+    padding: 8px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: $brown2;
+    &:hover{
+        padding: 13px;
+        background-color: #fff1e3;
+        color: $brown3;
+    }
+    transition: 0.3s ease;
+    
+}
+.selectVanButtonText{
+    font-family: Karla;
+    text-align: left;
+    font-size: 2.5vh;
+    font-weight: 500;
+}
+.selectVanGridContainer{
+    display: grid;
+    margin:auto;
+    grid-template-columns: 50% 50%;
+    max-width: 50vw;
+    @media (max-width: 1000px) {
+        grid-template-columns: 100%;
+        max-width: 100vh;
+    }
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding-bottom: 40px;
+}
+
+.selectVanPageGrid {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 30px;
+    row-gap: 30px;
+    grid-template-columns: 50% 50%;
+    @media (max-width: 1000px) {
+        grid-template-columns: 100%;
+        max-width: 100vh;
+    }
+}
+
+.welcome{
+    color: #865f5f;
+    opacity: 54%;
+    left:0;
+    font-size: 2vh;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+.welcomeTitle{
+    color: #875B5B;
+    font-weight: 600;
+    font-size: 3.5vh;
+    font-family: "Rubik";
+}
+
+.selectTitle{
+    color: $brown2;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 2.5vh;
+    text-align: center;
+    @media (max-width:700px) {
+        font-size: 20px;
+    }
+    padding: 15px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,42 @@
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+$red: #FF7C7C;
+
+div#buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+// Set out the style for all buttons
+#buttonContainer button {
+    font-family: "Karla", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 7px;
+
+    
+    // Use a bit of padding of left and right
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    border: none;
+    outline: none;
+}
+
+button#confirmation {
+    background-color: $brown1;
+    color: $yellow;
+    &:hover{
+        filter: brightness(110%) saturate(80%);
+    }
+    transition: 0.2s ease;
+}
+
+button#return {
+    background-color: transparent;
+    color: $yellow;
+    font-weight: normal;
+}

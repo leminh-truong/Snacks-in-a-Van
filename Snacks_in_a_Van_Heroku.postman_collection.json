@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "a0d82c35-8dbc-4c58-829b-fca96f47980f",
+		"name": "Snacks_in_a_Van_Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Johnny\",\n    \"lastName\": \"Appleseed\",\n    \"email\": \"tester@test.com\",\n    \"password\": \"I like apples\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/user/create",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a menu item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Cappuccino\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/menu/:name",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"menu",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "Cappuccino"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the whole menu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/menu/",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"menu",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create an order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderItems\": [{\n        \"itemID\": \"6076323732841a9959f91d82\",\n        \"qty\": 1\n    }],\n    \"van\": \"6076348132841a9959f91d8a\",\n    \"customer\": \"6073aa3d7404020b6d7f58a0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/order/new",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"order",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add an item to order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/order/add/:id/:name/:qty",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"order",
+						"add",
+						":id",
+						":name",
+						":qty"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "608247ba4d5aa2001569ce89"
+						},
+						{
+							"key": "name",
+							"value": "Latte"
+						},
+						{
+							"key": "qty",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"Finalise\" order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"OUTSTANDING\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/order/change-status/:id/:status",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"order",
+						"change-status",
+						":id",
+						":status"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "60823bb1d243a60015918f97"
+						},
+						{
+							"key": "status",
+							"value": "OUTSTANDING"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"Ready\" Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/order/change-status/:id/:status",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"order",
+						"change-status",
+						":id",
+						":status"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "60823bb1d243a60015918f97"
+						},
+						{
+							"key": "status",
+							"value": "READY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a particular order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/order/get/:id",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"order",
+						"get",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "608247ba4d5aa2001569ce89"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all vans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/van",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"van"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all open vans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/van/all-open",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"van",
+						"all-open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a particular van",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/van/:id",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"van",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6076348132841a9959f91d8a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a van's outstanding orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/van/:id/outstanding-orders",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"van",
+						":id",
+						"outstanding-orders"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6076348132841a9959f91d8a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a van as open and send geolocation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/van/:id/open-van/:xpos/:ypos",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"van",
+						":id",
+						"open-van",
+						":xpos",
+						":ypos"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6076348132841a9959f91d8a"
+						},
+						{
+							"key": "xpos",
+							"value": "-37.8040414276515"
+						},
+						{
+							"key": "ypos",
+							"value": "144.95851057263107"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a van as closed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://devdogs.herokuapp.com/api/van/:id/close-van",
+					"protocol": "https",
+					"host": [
+						"devdogs",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"van",
+						":id",
+						"close-van"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6076348132841a9959f91d8a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,49 @@
+$brown0: #805858; // <- not used in original design
+$brown1: #977171;
+$brown2: #C08C85;
+$brown3: #EEC3B0;
+$yellow: #FCE9D7;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+.vanTitle{
+    font-weight:600;
+    font-size:3vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    color: $brown1;
+    text-align: center;
+    font-family: Rubik;
+}
+
+.vanStatus{
+  padding-top: 3vh;
+  font-weight:600;
+  font-size:2.5vh;
+  padding-bottom:20px;
+  color:$brown2;
+  text-align: center;
+  font-family: Karla;
+} 
+
+.vanMenuButtonGrid{
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 2vh;
+}
+
+.yellowBackground {
+  margin: -5vh;
+  height: 100%;
+  min-height: 100%;
+  background-color: $yellow;
+}
+
+.vanStatusIcon {
+  max-width: 6vh;
+  max-height: 6vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

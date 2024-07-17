@@ -1,0 +1,18 @@
+
+.readyOrderButton {
+    cursor: pointer;
+    position:absolute; 
+    top: -7px; 
+    right: -7px;
+    
+    width: 32px;
+    height: 32px;
+
+    background: #C4D8B8;
+    border-radius: 50%;
+
+    transition: 0.1s ease;
+    &:hover{
+        filter: brightness(90%) saturate(140%);
+    }
+}
